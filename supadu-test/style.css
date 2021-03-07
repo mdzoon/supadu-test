@@ -1,0 +1,241 @@
+/*
+Theme Name: Supadu Test
+Theme URI: https://www.michaeldyczkowski.co.uk/
+Template: twentytwentyone
+Author: Michael Dyczkowski
+Author URI: https://www.michaeldyczkowski.co.uk/
+Description: Extenion for Twenty Twenty-One.
+Tags: one-column,accessibility-ready,custom-colors,custom-menu,custom-logo,editor-style,featured-images,footer-widgets,block-patterns,rtl-language-support,sticky-post,threaded-comments,translation-ready
+Version: 1.0
+Updated: 2021-03-07 19:43:42
+*/
+
+:root {
+
+	/* Font Family */
+	--global--font-primary: var(--font-headings, Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif);
+	--global--font-secondary: var(--font-base, Helvetica Neue, Helvetica, Arial, sans-serif);
+
+  /* Colours */
+  --global--color-background: var(--global--color-white);
+  --global--color-primary: #101C42;
+	--global--color-secondary: #101C42;
+  --global--color-contrast: #BFAC22;
+
+	/* Headings */
+	--heading--font-size-h5: var(--global--font-size-xl);
+  --heading--font-size-h6: var(--global--font-size-lg);
+
+	/* Buttons */
+	--button--border-radius: 3px;
+}
+
+h5,
+h6 {
+  font-family: var(--global--font-secondary);
+}
+
+.row {
+  margin-right: -1rem;
+  margin-left: -1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.col {
+  padding: 1rem;
+} 
+.col.left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.col.right {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+.top {
+  display: none;
+}
+.bottom {
+  display: block;
+}
+@media only screen and (max-width: 767px) {
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .top {
+    display: block;
+  }
+  .bottom {
+    display: none;
+  }
+}
+
+.data-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.note {
+  font-size: small;
+}
+
+.book-retailers-wrapper > div:first-child {
+  background-color: var(--global--color-primary);
+  color: var(--global--color-white);
+  text-align: center;
+  width: 100%;
+  padding: .25rem;
+  margin-bottom: 2rem;
+}
+.retailers-container.data-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+.retailer-card {
+  text-align: center;
+  padding: .75rem;
+  min-width: 20rem;
+}
+@media only screen and (max-width: 767px) {
+  .retailer-card {
+    min-width: none;
+    width: 100%;
+  }  
+}
+
+.book-image {
+  -webkit-box-shadow: 0px 10px 13px -7px var(--global--color-border), 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px var(--global--color-border), 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.book-title {
+  letter-spacing: 1px;
+}
+
+.show-book-description,
+.author-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.show-book-description span:last-child,
+.author-name span:last-child {
+  margin-left: .5rem;
+  font-size: 20px;
+  color: var(--global--color-contrast);
+}
+.show-book-description span:last-child.rotate,
+.author-name span:last-child.rotate {
+  -webkit-animation: dashicons-rotate 0.3s infinite;
+          animation: dashicons-rotate 0.3s infinite;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 0.8, 1.0);
+          animation-timing-function: cubic-bezier(0, 0, 0.8, 1.0);
+}
+.close {
+  margin-left: auto;
+  cursor: pointer;
+  font-size: smaller;
+  text-decoration: underline;
+}
+.close:hover {
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+@-webkit-keyframes dashicons-rotate {
+  0% {
+    -webkit-transform: rotate( 0deg );
+            transform: rotate( 0deg );
+  }
+  100% {
+    -webkit-transform: rotate( 360deg );
+            transform: rotate( 360deg );
+  }
+}
+@keyframes dashicons-rotate {
+  0% {
+    -webkit-transform: rotate( 0deg );
+            transform: rotate( 0deg );
+  }
+  100% {
+    -webkit-transform: rotate( 360deg );
+            transform: rotate( 360deg );
+  }
+}
+
+.author-biography {
+  padding: 0.75rem;
+  background-color: var(--global--color-yellow);
+  border-radius: var(--button--border-radius);
+  margin-top: 1rem;
+  font-size: smaller;
+}
+
+.book-description p {
+  margin-top: .75rem;
+}
+
+.book-sale-wrapper {
+  text-align: center;
+}
+
+.book-price span {
+  font-size: medium;
+}
+
+.book-review-wrapper {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.review-description {
+  margin-top: 1rem
+}
+.review-reviewer {
+  font-size: smaller;
+  font-style: normal;
+}
+.review-reviewer em {
+  font-style: normal;
+}
