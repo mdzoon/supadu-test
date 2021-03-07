@@ -8,7 +8,7 @@
       var icon = $( elm ).children(".dashicons-insert"), close = $( elm + '-content' ).children(".close");
 
       var action = () => {
-        $( elm ).attr( "aria-pressed", ( _, attr) => attr == 1 ? 0 : 1 );
+        $( elm ).attr( "aria-pressed", ( _, attr) => Number(attr) === 1 ? 0 : 1 );
         icon.addClass("rotate");
         setTimeout( () => {
           icon.removeClass("rotate");
